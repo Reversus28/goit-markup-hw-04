@@ -1,5 +1,5 @@
 /* основной цвет текста #212121  */
-/* вторичый цвет текста #757575 */
+/* вторичный цвет текста #757575 */
 /* вторичный цвет фона #F5F4FA */
 /* акцент #2196F3 */
 
@@ -138,28 +138,60 @@ img {
 }
 
 .header-address > .address-item {
+  display: flex;
+  align-items: center;
+
   color: var(--secondary-text-color);
   font-weight: 500;
   font-style: normal;
   line-height: 1.4;
   letter-spacing: 0.02em;
+  text-align: center;
 }
 
 .header-address > .address-item:hover,
 .header-address > .address-item:focus {
   color: var(--accent-color);
 }
+
+.address-item .icon-mail {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+
+  fill: currentColor;
+}
+
+.address-item .icon-phone {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+
+  fill: currentColor;
+}
 /*=========== END HEADER ===========*/
 
 /*=========== HERO ===========*/
 .hero {
-  background-color: #2f303a;
+  height: 600px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 200px;
   padding-bottom: 200px;
+
   text-align: center;
+
+  background-color: #2f303a;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero.jpg);
 }
 
-.hero > .hero-title {
+.hero .hero-title {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
@@ -173,7 +205,7 @@ img {
   text-transform: uppercase;
 }
 
-.hero > .button {
+.hero .button {
   padding: 10px 32px;
 
   color: #ffffff;
@@ -186,6 +218,7 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
+  cursor: pointer;
 }
 /*=========== END HERO ===========*/
 
@@ -214,6 +247,22 @@ img {
 
 .features-list .list-item:not(:last-child) {
   margin-right: 30px;
+}
+.features-list .list-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+
+  background-color: var(--secondary-bg-color);
+}
+
+.features-list .icon {
+  width: 70px;
+  height: 70px;
 }
 
 .features-list .list-title {
